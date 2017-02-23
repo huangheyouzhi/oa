@@ -1,45 +1,33 @@
 package com.hhyz.oa.model;
 
-import java.io.Serializable;
-import java.sql.Timestamp;
+public class User {
+    private String userId;
 
-public class User implements Serializable{
-	private Integer id;
-	private String userName;
-	private String password;
+    private String userName;
 
-	public Integer getId() {
-		return id;
-	}
+    private String userPwd;
 
-	public void setId(Integer id) {
-		this.id = id;
-	}
+    public String getUserId() {
+        return userId;
+    }
 
-	public String getUserName() {
-		return userName;
-	}
+    public void setUserId(String userId) {
+        this.userId = userId == null ? null : userId.trim();
+    }
 
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
+    public String getUserName() {
+        return userName;
+    }
 
-	public String getPassword() {
-		return password;
-	}
+    public void setUserName(String userName) {
+        this.userName = userName == null ? null : userName.trim();
+    }
 
-	public void setPassword(String password) {
-		if (password != null) {
-			password = password.trim();
-		} else {
-			password = "";
-		}
-		this.password = password;
-	}
+    public String getUserPwd() {
+        return userPwd;
+    }
 
-	@Override
-	public String toString() {
-		String userToString = "id=" + id + "-userName=" + userName + "-password=" + password;
-		return userToString;
-	}
+    public void setUserPwd(String userPwd) {
+        this.userPwd = userPwd == null ? null : userPwd.trim();
+    }
 }
